@@ -72,7 +72,7 @@ func AuthenticateUser(oauthConfig *oauth2.Config, options ...AuthenticateUserOpt
 	if optionsConfig.AuthCallHTTPParams != nil {
 		parsedURL, err := url.Parse(urlString)
 		if err != nil {
-			return nil, stacktrace.Propagate(err, "fa`iled parsing url string")
+			return nil, stacktrace.Propagate(err, "failed parsing url string")
 		}
 		params := parsedURL.Query()
 		for key, value := range optionsConfig.AuthCallHTTPParams {
